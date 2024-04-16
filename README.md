@@ -9,16 +9,16 @@ Several modifications in [original carla-ros-bridge(ROS2)](https://carla.readthe
      ```
      <br/>
 2. Different sizes of **carla_manual_control** display window
-   - reduced `image_size_*` of `rgb_view` sensor in `objects.json`   
+   - added `dp_ratio` in `carla_manual_control.py`
+     ```python
+     dp_ratio = 0.8
+     ```
+   - reduced `image_size_*` of `rgb_view` sensor in `objects.json` (ex. dp_ratio = 0.8)   
      ```json
      {
           "type": "sensor.camera.rgb",
           "id": "rgb_view",
-          "image_size_x": 400,
-          "image_size_y": 300
+          "image_size_x": 640,
+          "image_size_y": 480
       },
-     ```
-   - added `dp_ratio` in `carla_manual_control.py`
-     ```python
-     dp_ratio = 0.5
      ```
