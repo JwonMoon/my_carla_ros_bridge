@@ -1,12 +1,24 @@
 # my_carla_ros_bridge
-Several modifications in [ carla-ros-bridge ]   
-(install original carla-ros-bridge(ROS2) : https://carla.readthedocs.io/projects/ros-bridge/en/latest/ros_installation_ros2/)
-
-### Modifications
-- Changing size of carla_manual_control display   
-
-&emsp;&emsp;1. changed `image_size_x`, `image_size_y` of 'rgb_view' sensor in `objects.json`   
-<pre> (800, 600) ⮕ (400, 300) </pre>
-
-&emsp;&emsp;2. added `dp_ratio` in `carla_manual_control.py`
-<pre> dp_ratio = 0.5 </pre>
+Several modifications in [original carla-ros-bridge(ROS2)](https://carla.readthedocs.io/projects/ros-bridge/en/latest/ros_installation_ros2/)     
+<br/>
+## Modifications
+1. Compatibility with different CARLA versions
+   - added `export_path.sh` and `run_carla_bridge.sh` to use alias command
+     ```bash
+     alias run_carla_bridge="bash /home/misys/aw.universe/carla/carla-ros-bridge/run_carla_bridge.sh"
+     ```
+     <br/>
+2. Different sizes of **carla_manual_control** display window
+   - reduced `image_size_*` of `rgb_view` sensor in `objects.json`   
+     ```json
+     {
+          "type": "sensor.camera.rgb",
+          "id": "rgb_view",
+          "image_size_x": 400,
+          "image_size_y": 300
+      },
+     ```
+   - added `dp_ratio` in `carla_manual_control.py`
+     ```python
+     dp_ratio = 0.5
+     ```
