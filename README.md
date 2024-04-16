@@ -5,7 +5,7 @@ Several modifications in [original carla-ros-bridge(ROS2)](https://carla.readthe
 1. Compatibility with different CARLA versions
    - added `export_path.sh` and `run_carla_bridge.sh` to use alias command
      ```bash
-     alias run_carla_bridge="bash /home/misys/aw.universe/carla/carla-ros-bridge/run_carla_bridge.sh"
+     alias run_carla_bridge="bash /home/misys/aw.universe/carla/my_carla_ros_bridge/run_carla_bridge.sh"
      ```
      <br/>
 2. Different sizes of **carla_manual_control** display window
